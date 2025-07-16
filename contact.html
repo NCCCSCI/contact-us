@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <link rel="stylesheet" href="style1.css" type="text/css"/>
+  <title>Contact Us</title>
+</head>
+<body>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="container">
+  <h1>Contact Us</h1>
+
+  <form action="contact.php" method="post">
+    <br/>
+    <label	 for="name">Name</label>
+    <input type="text" id="name" name="name" placeholder="e.g. John Smith" required><br>
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" placeholder="e.g johnsmith@gmail.com" required><br>
+
+    <label for="subject">Subject</label>
+    <input type="text" id="subject" name="subject" placeholder="Who is John?" required><br>
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="5" cols="50" placeholder="John is a silly goose." ></textarea><br>
+
+    <div class="g-recaptcha" data-sitekey="6LdivFsrAAAAAMcLK5P2ACau8LOVeKboN4v4de8v"></div>
+
+    <input type="submit"  value="Submit">
+
+  </form>
+
+
+  <button onclick="myFunction">Home</button>
+
+  <script>
+    function myFunction() {
+      window.open('index.html', '_blank');
+
+    }
+  </script>
+
+
+
+</div>
+
+</body>
+
+</html>
