@@ -54,7 +54,7 @@ mysqli_close($link);
       <tr>
         <td><?= htmlentities ($row['id']) ?></td>
         <td><?= htmlentities ($row['name']) ?></td>
-        <td><?= htmlentities ($row['email']) ?></td>
+        <td><?= '<a href="mailto:' . htmlentities($row['email']) . '">' . htmlentities($row['email']) . '</a>' ?></td>
         <td><?= htmlentities ($row['subject']) ?></td>
         <td><?= htmlentities ($row['message']) ?></td>
       </tr>
