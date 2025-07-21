@@ -1,1 +1,15 @@
-operpopowrhpowrhp
+body {
+    font-family: Courier;
+    font-size: 1000%;
+    text-align: left;
+    color: mintcream;
+    opacity: 60%;
+    background-image: url("puppies.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
