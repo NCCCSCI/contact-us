@@ -21,7 +21,6 @@ if (!$captcha) {
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
 
 
-
 $args = [
 	'name' => ['filter' => FILTER_VALIDATE_REGEXP, 'options' => [ 'regexp' => '/^[\pL\pP\pZ]{3,50}$/u']],
 	'email' => ['filter' => FILTER_VALIDATE_EMAIL, 'options' => [ FILTER_FLAG_EMAIL_UNICODE ]],
