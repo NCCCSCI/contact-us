@@ -1,5 +1,5 @@
 <?php
-$secret = "6LdivFsrAAAAAEBoXjj8iab0QmcmPjxjbS6LaqXs";
+include 'config.php';
 
 if(isset($_POST['name']))  { $name=$_POST['name']; }
 
@@ -20,7 +20,6 @@ if (!$captcha) {
 $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=".$captcha."&remoteip=".$_SERVER['REMOTE_ADDR']);
 
 
-
 $args = [
 	'name' => ['filter' => FILTER_VALIDATE_REGEXP, 'options' => [ 'regexp' => '/^[\pL\pP\pZ]{3,50}$/u']],
 	'email' => ['filter' => FILTER_VALIDATE_EMAIL, 'options' => [ FILTER_FLAG_EMAIL_UNICODE ]],
@@ -38,7 +37,7 @@ exit;
 
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$mysqli = new mysqli("localhost","anthony", "Ares1234!", "contact");
+include 'config.php';
 
 
 $stmt = $mysqli->prepare("INSERT INTO contact_info (name, email, subject, message) VALUES (?, ?, ?, ?)");
