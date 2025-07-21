@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     background-image: url("ncc.jpg");
-    baclground-position: center;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -86,11 +86,19 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: limegreen;
 }
-button{
-    display: inline-block;
-    color: white;
-    background-color: #007bff;
-    padding: 5px 15px;
+a{
+    text-decoration:none;
+    font-weight: bold;
+    font-size: 30px;
     text-align: center;
-    text-decoration: none;
+    font-family: Courier;
+    color: darkolivegreen;
+    padding: 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    display:block;
+
+}
+a:hover {
+    background-color: limegreen;
 }
