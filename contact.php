@@ -1,5 +1,5 @@
 <?php
-$secret = "6LdivFsrAAAAAEBoXjj8iab0QmcmPjxjbS6LaqXs";
+include 'config.php';
 
 if(isset($_POST['name']))  { $name=$_POST['name']; }
 
@@ -39,7 +39,7 @@ exit;
 
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-$mysqli = new mysqli("localhost","anthony", "Ares1234!", "contact");
+include 'config.php';
 
 
 $stmt = $mysqli->prepare("INSERT INTO contact_info (name, email, subject, message) VALUES (?, ?, ?, ?)");
