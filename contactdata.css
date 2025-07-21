@@ -1,0 +1,16 @@
+body{
+    background-color: navajowhite;
+
+}
+thead{
+    font-family: Times New Roman;
+}
+table, th, td {
+   border: 1px solid black;
+
+}
+th, td {
+    padding: 10px;
+}
+
+
