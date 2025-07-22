@@ -33,6 +33,7 @@ mysqli_close($link);
     <meta charset="UTF-8">
     <title>Contact Data</title>
     <link rel="stylesheet" href="/css/contactdata.css" type="text/css">
+    <h1>Contact Data Page</h1>
 </head>
 <body>
 
