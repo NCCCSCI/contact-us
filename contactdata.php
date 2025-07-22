@@ -36,7 +36,6 @@ mysqli_close($link);
     <h1>Contact Data Page</h1>
 </head>
 <body>
-
   <table>
     <thead>
     <tr>

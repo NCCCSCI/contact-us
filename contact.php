@@ -39,7 +39,6 @@ exit;
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 include 'config.php';
 
-
 $stmt = $mysqli->prepare("INSERT INTO contact_info (name, email, subject, message) VALUES (?, ?, ?, ?)");
 $stmt->bind_param("ssss", $results['name'],$results['email'],$results['subject'],$results['message']);
 

@@ -7,7 +7,6 @@ thead{
 table, th, td {
     border: 1px solid black;
     padding: 10px;
-
 }
 th, td {
     padding: 10px;
@@ -16,5 +15,3 @@ h1{
     font-family: Courier New;
     text-align: left;
 }
-
-

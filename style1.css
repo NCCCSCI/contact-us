@@ -82,7 +82,6 @@ input[type="submit"] {
     cursor: pointer;
     transition: background 0.3s ease;
 }
-
 input[type="submit"]:hover {
     background-color: limegreen;
 }
