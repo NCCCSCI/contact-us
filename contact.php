@@ -43,7 +43,6 @@ if (empty($results) || in_array(false,$results,true)){
 exit;
 }
 
-
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 include 'config.php';
 
@@ -56,19 +55,8 @@ $stmt->close();
 $mysqli->close();
 
 header("Location: /thanks.html")
+
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-
-</head>
-<body>
-
- <p>Count: <?= $_SESSION['count'] ?></p>
-
-</body>
-</html>
 
 
 
