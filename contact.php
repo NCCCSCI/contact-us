@@ -56,7 +56,7 @@ $stmt->close();
 $mysqli->close();
 
 header("Location: /thanks.html")
-
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,4 +71,4 @@ header("Location: /thanks.html")
 </html>
 
 
-?>
+
