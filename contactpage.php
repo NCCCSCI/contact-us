@@ -6,7 +6,7 @@ if (empty($_SESSION['count'])){
 }
 $_SESSION['count']++;
 
-if($_SESSION['count'] > 5){
+if($_SESSION['count'] > 50){
     header("Location: /");
 }
 ?>
