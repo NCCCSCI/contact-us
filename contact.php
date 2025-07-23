@@ -54,7 +54,7 @@ $stmt->execute();
 $stmt->close();
 $mysqli->close();
 
-header("Location: /thanks.html")
+header("Location: /thanks.html");
 
 ?>
 
