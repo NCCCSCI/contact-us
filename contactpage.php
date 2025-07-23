@@ -14,6 +14,8 @@
     <br>
     <a href="/" >Home</a>
 
+    <p>Count: <?= $_SESSION['count'] ?></p>
+
     <label	 for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="e.g. John Smith" required><br>
 
