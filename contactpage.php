@@ -6,7 +6,7 @@ if (empty($_SESSION['count'])){
 }
 $_SESSION['count']++;
 
-if($_SESSION['count'] > 50){
+if($_SESSION['count'] > 5){
     header("Location: /");
 }
 ?>
@@ -26,8 +26,6 @@ if($_SESSION['count'] > 50){
   <form action="contact.php" method="post">
     <br>
     <a href="/" >Home</a>
-
-    <p>Count: <?= $_SESSION['count'] ?></p>
 
     <label	 for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="e.g. John Smith" required><br>
