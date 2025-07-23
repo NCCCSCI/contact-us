@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (empty($_SESSION['count'])){
+    $_SESSION['count'] = 0;
+}
+$_SESSION['count']++;
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>

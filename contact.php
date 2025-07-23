@@ -2,9 +2,10 @@
 
 session_start();
 
-if (empty($_SESSION['count'])){
-    $_SESSION['count'] = 0;
+if (empty($_SESSION['count'])) {
+	die('Go away');
 }
+
 $_SESSION['count']++;
 
 include 'config.php';
