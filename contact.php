@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+
+if (empty($_SESSION['count'])){
+    $_SESSION['count'] = 0;
+}
+$_SESSION['count']++;
+
 include 'config.php';
 
 if(isset($_POST['name']))  { $name=$_POST['name']; }
