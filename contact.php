@@ -6,6 +6,10 @@ if (empty($_SESSION['count'])) {
 	die('Go away');
 }
 
+if (empty($_GET['csrf']) || $_GET['csrf'] !== $_SESSION['csrf']) {
+    die('Go away more');
+}
+
 $_SESSION['count']++;
 
 include 'config.php';

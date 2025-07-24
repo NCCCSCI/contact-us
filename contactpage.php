@@ -5,6 +5,7 @@ if (empty($_SESSION['count'])){
     $_SESSION['count'] = 0;
 }
 $_SESSION['count']++;
+$_SESSION['csrf'] = md5(time());
 
 if($_SESSION['count'] > 5){
     header("Location: /");
@@ -27,6 +28,12 @@ if($_SESSION['count'] > 5){
     <br>
     <a href="/" >Home</a>
 
+    <a href="next.php?csrf=<?= $_SESSION['csrf'] ?>">Go</a>
+    <!-- 'real-world' -->
+    <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
+    <!-- easy to read -->
+    <input type="text" name="csrf"  value="<?= $_SESSION['csrf'] ?>">
+
     <label	 for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="e.g. John Smith" required><br>
 
@@ -42,6 +49,9 @@ if($_SESSION['count'] > 5){
     <div class="g-recaptcha" data-sitekey="6Lfmc4orAAAAAOT6i--MDAg8D2eLSlIYXDxo7Dd5"></div>
 
     <input type="submit"  value="Submit">
+
+    <p>Count: <?= $_SESSION['count'] ?></p>
+    <p>CSRF: <?= $_SESSION['csrf'] ?></p>
 
   </form>
 
