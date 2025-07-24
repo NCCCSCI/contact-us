@@ -28,7 +28,6 @@ if($_SESSION['count'] > 5){
     <br>
     <a href="/" >Home</a>
 
-    <a href="next.php?csrf=<?= $_SESSION['csrf'] ?>">Go</a>
     <!-- 'real-world' -->
     <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
 
