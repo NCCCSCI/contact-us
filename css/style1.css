@@ -85,7 +85,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: limegreen;
 }
-a{
+.link1{
     text-decoration:none;
     font-weight: bold;
     font-size: 30px;
@@ -98,10 +98,10 @@ a{
     display:block;
 
 }
-a:hover {
+.link1:hover {
     background-color: limegreen;
 }
-button {
+.link2{
     background: none;
     color: transparent;
     border: none;

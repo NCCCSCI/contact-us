@@ -28,7 +28,7 @@ if($_SESSION['count'] > 5){
 
   <form action="contact.php" method="post">
     <br>
-    <a href="/" >Home</a>
+    <a href="/" class="link1" >Home</a>
 
     <!-- 'real-world' -->
     <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
@@ -49,7 +49,7 @@ if($_SESSION['count'] > 5){
 
     <input type="submit"  value="Submit">
 
-    <button id="invisibleButton" >Reset</button>
+     <a href="session-end.php" class="link2" >reset</a>
 
   </form>
 
