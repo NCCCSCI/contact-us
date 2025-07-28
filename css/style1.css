@@ -101,3 +101,10 @@ a{
 a:hover {
     background-color: limegreen;
 }
+button {
+    background: none;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}

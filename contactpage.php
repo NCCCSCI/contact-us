@@ -8,6 +8,7 @@ $_SESSION['count']++;
 $_SESSION['csrf'] = md5(time());
 
 if($_SESSION['count'] > 5){
+    error_log("Too many attempts", 0);
     header("Location: /");
 }
 ?>
@@ -18,6 +19,7 @@ if($_SESSION['count'] > 5){
   <link rel="stylesheet" href="css/style1.css" type="text/css">
   <title>Contact Us</title>
   <link rel="icon" type="image/x-icon" href="/css/images/phone2.png">
+  <script src="js/ping.js" defer></script>
 </head>
 <body>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -46,6 +48,8 @@ if($_SESSION['count'] > 5){
     <div class="g-recaptcha" data-sitekey="6Lfmc4orAAAAAOT6i--MDAg8D2eLSlIYXDxo7Dd5"></div>
 
     <input type="submit"  value="Submit">
+
+    <button id="invisibleButton" >Reset</button>
 
   </form>
 
