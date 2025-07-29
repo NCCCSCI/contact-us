@@ -1,4 +1,17 @@
 <?php
+
+session_start();
+
+if (empty($_SESSION['count'])) {
+	die('Go away');
+}
+
+if (empty($_GET['csrf']) || $_GET['csrf'] !== $_SESSION['csrf']) {
+    die('Go away more');
+}
+
+$_SESSION['count']++;
+
 include 'config.php';
 
 if(isset($_POST['name']))  { $name=$_POST['name']; }
@@ -35,7 +48,6 @@ if (empty($results) || in_array(false,$results,true)){
 exit;
 }
 
-
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 include 'config.php';
 
@@ -47,6 +59,9 @@ $stmt->execute();
 $stmt->close();
 $mysqli->close();
 
-header("Location: /thanks.html")
+header("Location: /thanks.html");
 
 ?>
+
+
+

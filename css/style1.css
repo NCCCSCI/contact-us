@@ -1,12 +1,12 @@
 * {
     margin: 0;
-    padding: 0;
+    padding: 10px 5px;
     box-sizing: border-box;
 }
 
 body {
     font-family: Arial, sans-serif;
-    background-image: url("ncc.jpg");
+    background-image: url("images/ncc.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,7 +85,7 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: limegreen;
 }
-a{
+.link1{
     text-decoration:none;
     font-weight: bold;
     font-size: 30px;
@@ -98,6 +98,13 @@ a{
     display:block;
 
 }
-a:hover {
+.link1:hover {
     background-color: limegreen;
+}
+.link2{
+    background: none;
+    color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }

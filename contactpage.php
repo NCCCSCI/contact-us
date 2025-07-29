@@ -1,9 +1,25 @@
+<?php
+session_start();
+
+if (empty($_SESSION['count'])){
+    $_SESSION['count'] = 0;
+}
+$_SESSION['count']++;
+$_SESSION['csrf'] = md5(time());
+
+if($_SESSION['count'] > 5){
+    error_log("Too many attempts", 0);
+    header("Location: /");
+}
+?>
+
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
   <link rel="stylesheet" href="css/style1.css" type="text/css">
   <title>Contact Us</title>
-  <link rel="icon" type="image/x-icon" href="phone2.png">
+  <link rel="icon" type="image/x-icon" href="/css/images/phone2.png">
+  <script src="js/ping.js" defer></script>
 </head>
 <body>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -12,7 +28,10 @@
 
   <form action="contact.php" method="post">
     <br>
-    <a href="/" >Home</a>
+    <a href="/" class="link1" >Home</a>
+
+    <!-- 'real-world' -->
+    <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
 
     <label	 for="name">Name</label>
     <input type="text" id="name" name="name" placeholder="e.g. John Smith" required><br>
@@ -29,6 +48,8 @@
     <div class="g-recaptcha" data-sitekey="6Lfmc4orAAAAAOT6i--MDAg8D2eLSlIYXDxo7Dd5"></div>
 
     <input type="submit"  value="Submit">
+
+     <a href="session-end.php" class="link2" >reset</a>
 
   </form>
 
