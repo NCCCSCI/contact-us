@@ -34,7 +34,7 @@ if($_SESSION['count'] > 5){
     <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
 
     <label for="name">Name</label>
-    <input type="text" id="name" name="name" pattern="^(?!.*[<>])([a-zA-Z]{2,15}\s[a-zA-Z]{2,15}\s[a-zA-Z]{2,15})$" placeholder="e.g. John Smith" required title="Please enter your full name (First Last)."><br>
+    <input type="text" id="name" name="name" pattern="^(?!.*[<>])([a-zA-Z]{1,15}\s[a-zA-Z]{1,15})$" placeholder="e.g. John Smith" required title="Please enter your full name (First Last)."><br>
 
     <label for="email">Email</label>
     <input type="email" id="email" name="email" placeholder="e.g johnsmith@gmail.com" required title="Please enter a valid email address."><br>
