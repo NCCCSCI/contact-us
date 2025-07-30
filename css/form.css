@@ -1,0 +1,42 @@
+body {
+    font-family: "Verdana",sans-serif;
+}
+dfn {
+    font-weight: 600;
+}
+.block {
+    padding: 3px;
+    margin: 5px;
+}
+span.label,
+label {
+    display: block;
+    font-weight: 600;
+}
+.frm-error {
+    font-size: 1.4rem;
+    color: crimson;
+    background-color: lightpink;
+    display: inline-block;
+    padding: 3px;
+    border-radius: 5px;
+}
+.error {
+    font-size: .8rem;
+    color: crimson;
+    display: block;
+}
+.hidden {
+    display: none;
+}
+
+.required::before {
+    content: "* ";
+    color: crimson;
+    display: inline;
+}
+
+/* This will display an error message after an input with invalid data */
+*:invalid:not(:placeholder-shown) + .error{
+    display: block;
+}

@@ -66,6 +66,28 @@ textarea:focus {
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
 }
 
+input[type="text"]:valid {
+    background-color: lawngreen;
+}
+input[type="text"]:invalid {
+    background-color: lightpink;
+}
+
+input[type="email"]:valid {
+    background-color: lawngreen;
+}
+input[type="email"]:invalid {
+    background-color: lightpink;
+}
+textarea:valid {
+    background-color: lawngreen;
+}
+textarea:invalid {
+    background-color: lightpink;
+}
+
+
+
 textarea {
     resize: vertical;
 }

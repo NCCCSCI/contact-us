@@ -33,17 +33,17 @@ if($_SESSION['count'] > 5){
     <!-- 'real-world' -->
     <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
 
-    <label	 for="name">Name</label>
-    <input type="text" id="name" name="name" placeholder="e.g. John Smith" required><br>
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name" pattern="^(?!.*[<>])([a-zA-Z]{2,15}\s[a-zA-Z]{2,15}\s[a-zA-Z]{2,15})$" placeholder="e.g. John Smith" required title="Please enter your full name (First Last)."><br>
 
     <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="e.g johnsmith@gmail.com" required><br>
+    <input type="email" id="email" name="email" placeholder="e.g johnsmith@gmail.com" required title="Please enter a valid email address."><br>
 
     <label for="subject">Subject</label>
-    <input type="text" id="subject" name="subject" placeholder="Who is John?" required><br>
+    <input type="text" id="subject" name="subject" pattern="(?=.*[a-zA-Z]{2,15}\s[a-zA-Z]{2,15})(?!.*[<>])^[\s\S]*$" placeholder="Who is John?" required title="Please enter a proper subject."><br>
 
     <label for="message">Message</label>
-    <textarea id="message" name="message" rows="5" cols="50" placeholder="John is a silly goose." ></textarea><br>
+    <textarea id="message" name="message" rows="5" cols="50" placeholder="John is a silly goose." required title="Please enter your message." ></textarea><br>
 
     <div class="g-recaptcha" data-sitekey="6Lfmc4orAAAAAOT6i--MDAg8D2eLSlIYXDxo7Dd5"></div>
 
