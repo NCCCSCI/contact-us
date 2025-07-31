@@ -36,7 +36,6 @@ label {
     display: inline;
 }
 
-/* This will display an error message after an input with invalid data */
 *:invalid:not(:placeholder-shown) + .error{
     display: block;
 }

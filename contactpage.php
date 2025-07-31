@@ -30,7 +30,6 @@ if($_SESSION['count'] > 5){
     <br>
     <a href="/" class="link1" >Home</a>
 
-    <!-- 'real-world' -->
     <input type="hidden" name="_csrf" value="<?= $_SESSION['csrf'] ?>">
 
     <label for="name">Name</label>
@@ -49,7 +48,7 @@ if($_SESSION['count'] > 5){
 
     <input type="submit"  value="Submit">
 
-     <a href="session-end.php" class="link2" >reset</a>
+    <a href="session-end.php" class="link2" >reset</a>
 
   </form>
 
